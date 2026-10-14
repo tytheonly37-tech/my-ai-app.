@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>My AI Lab</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 24px;
+      background: #101827;
+      color: #f3f4f6;
+      font: 17px system-ui, sans-serif;
+    }
+    main { max-width: 600px; margin: 40px auto; }
+    textarea, button {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 14px;
+      margin-top: 12px;
+      border-radius: 12px;
+      font: inherit;
+    }
+    textarea { min-height: 120px; }
+    button { cursor: pointer; }
+    #reply { white-space: pre-wrap; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>My AI Lab</h1>
+    <p>My first personal AI learning app.</p>
+    <textarea id="question"
+      placeholder="Ask a question or enter an idea"></textarea>
+    <button id="ask">Generate local demo response</button>
+    <p id="reply" aria-live="polite">
+      Your experiment will appear here.
+    </p>
+  </main>
+  <script>
+    const question = document.querySelector("#question");
+    const reply = document.querySelector("#reply");
+    document.querySelector("#ask").addEventListener("click", () => {
+      const input = question.value.trim();
+      reply.textContent = input
+        ? "Your input: " + input +
+          "\n\nThis is a demonstration, not an AI model yet."
+        : "Enter a question first.";
+    });
+  </script>
+</body>
+</html>
