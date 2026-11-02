@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#073b9b">
+  <meta name="description" content="English to Haitian Creole sentence practice.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Kreyòl Ayisyen — Study</title>
+</head>
+<body>
+<div class="app">
+  <header class="header">
+    <div class="flag" aria-hidden="true"><i></i><i></i><b>✥</b></div>
+    <div class="brand"><h1>Kreyòl Ayisyen</h1><p>Study · Practice · Speak</p></div>
+    <button class="gear" data-view="settings" aria-label="Settings">⚙</button>
+  </header>
+
+  <nav class="nav" aria-label="Main navigation">
+    <button data-view="home"><span>⌂</span>Home</button>
+    <button data-view="study" class="selected"><span>▤</span>Study</button>
+    <button data-view="flashcards"><span>▣</span>Flashcards</button>
+    <button data-view="settings"><span>⚙</span>Settings</button>
+  </nav>
+
+  <main>
+    <section id="study" class="screen">
+      <div class="progress">
+        <div><span>STUDY SENTENCE</span><strong id="counter">01 / 01</strong></div>
+        <div class="track"><span id="progress-fill"></span></div>
+      </div>
+
+      <article class="layer english">
+        <div class="layer-head"><span class="tag">ENGLISH</span><button class="speaker" data-speak="english" aria-label="Speak English sentence">🔊</button></div>
+        <p id="english-text" class="sentence">Good morning.</p>
+        <small id="english-status">English voice</small>
+      </article>
+
+      <article class="layer creole">
+        <div class="layer-head"><span class="tag">KREYÒL AYISYEN</span><button class="speaker" data-speak="creole" aria-label="Speak Haitian Creole sentence">🔊</button></div>
+        <p id="creole-text" class="sentence">Bonjou.</p>
+        <small id="creole-status">Checking for a Haitian Creole voice…</small>
+      </article>
+
+      <article class="layer pronunciation">
+        <div class="layer-head"><span class="tag">PRONUNCIATION GUIDE</span><button class="speaker" data-speak="pronunciation" aria-label="Speak pronunciation guide">🔊</button></div>
+        <p id="pronunciation-text" class="sentence">bohn-zhoo</p>
+        <small id="pronunciation-status">English voice reads this guide</small>
+      </article>
+
+      <div class="audio-actions">
+        <button id="play-creole" class="primary">🔊 Play Kreyòl Ayisyen</button>
+        <button id="stop" class="outline">■ Stop audio</button>
+      </div>
+      <p id="message" class="message" role="status" aria-live="polite">Choose a speaker to hear a layer.</p>
+      <div class="pager"><button id="previous" class="outline" disabled>← Previous</button><button id="next" class="primary" disabled>Next →</button></div>
+    </section>
+
+    <section id="home" class="screen hidden">
+      <span class="kicker">YOUR STUDY SPACE</span><h2>Welcome to Kreyòl Ayisyen</h2>
+      <p class="intro">Practice everyday Haitian Creole one sentence at a time.</p>
+      <div class="stat"><strong id="visited-count">0</strong><span>sentences visited on this device</span></div>
+      <button class="primary wide" data-view="study">Continue studying →</button>
+      <button class="outline wide" data-view="flashcards">Open flashcards</button>
+    </section>
+
+    <section id="flashcards" class="screen hidden">
+      <span class="kicker">REVIEW</span><h2>Flashcards</h2>
+      <p class="intro">Tap the card to reveal or hide the translation.</p>
+      <button id="flashcard" class="flashcard">
+        <span id="flash-label">ENGLISH</span><strong id="flash-front">Good morning.</strong>
+        <small>Tap to reveal</small><strong id="flash-back" class="hidden">Bonjou.</strong>
+      </button>
+      <button id="flash-audio" class="primary wide">🔊 Play Kreyòl Ayisyen</button>
+    </section>
+
+    <section id="settings" class="screen hidden">
+      <span class="kicker">PREFERENCES</span><h2>Settings</h2>
+      <div class="setting"><div><strong>Speech rate</strong><small>Adjust spoken audio speed.</small></div>
+        <select id="rate" aria-label="Speech rate"><option value="0.75">Slow</option><option value="0.9" selected>Normal</option><option value="1.05">Faster</option></select>
+      </div>
+      <div class="setting"><div><strong>Available voices</strong><small id="voice-summary">Checking voices…</small></div><button id="refresh" class="mini">Refresh</button></div>
+      <div class="setting"><div><strong>Study progress</strong><small>Saved on this device.</small></div><button id="reset" class="mini danger">Reset</button></div>
+      <p class="fine">Voice availability is controlled by your browser and operating system. This app does not download or generate voices.</p>
+    </section>
+  </main>
+  <footer>Made for practicing Kreyòl Ayisyen</footer>
+</div>
+<script src="./app.js" defer></script>
+</body>
+</html>
