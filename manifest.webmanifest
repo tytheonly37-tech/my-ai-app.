@@ -1,0 +1,10 @@
+{
+  "name": "Kreyòl Ayisyen Study",
+  "short_name": "Kreyòl Study",
+  "description": "English-to-Haitian-Creole sentence practice",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f2f6fd",
+  "theme_color": "#073b9b"
+}
