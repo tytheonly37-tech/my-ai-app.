@@ -1,0 +1,27 @@
+# Kreyòl Ayisyen — Study
+
+Static browser app built with HTML, CSS and vanilla JavaScript.
+
+## Files
+- `index.html` — screen structure
+- `styles.css` — responsive styling
+- `app.js` — navigation, local progress and speech controls
+- `manifest.webmanifest` — PWA metadata
+- `service-worker.js` — app-shell caching
+
+## GitHub Pages
+Upload the files to the repository root. In GitHub, open Settings → Pages, select Deploy from a branch, choose `main` and `/(root)`, then wait for deployment. Expected address:
+https://tytheonly37-tech.github.io/my-ai-app/
+
+## Audio limitations
+The app uses the browser's built-in Web Speech API. It selects an English voice for English and the pronunciation guide, and selects a voice for Haitian Creole only if the browser reports a voice whose language tag begins with `ht`. It does not substitute English for Haitian Creole. Availability varies by browser and operating system.
+
+## Included sample
+English: Good morning.
+Kreyòl Ayisyen: Bonjou.
+Pronunciation guide: bohn-zhoo
+
+The pronunciation spelling is an approximate learner aid and should be checked by a fluent speaker before adding more entries.
+
+## Verification
+This package's source was generated here, but it has not been run on a physical iPhone, tested against the user's installed voice inventory, or deployed to GitHub Pages. Those checks remain to be performed.
